@@ -48,14 +48,14 @@ void AShooterCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 
 }
 
-float AShooterCharacter::TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController *EventInstigator, AActor *DamageCauser) override 
-{
-	float DamageToApply = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
-	DamageToApply = FMath::Min(Health, DamageToApply);
-	Health -= DamageToApply;
+// float AShooterCharacter::TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController *EventInstigator, AActor *DamageCauser) override 
+// {
+// 	float DamageToApply = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+// 	DamageToApply = FMath::Min(Health, DamageToApply);
+// 	Health -= DamageToApply;
 
-	return DamageToApply;
-}
+// 	return DamageToApply;
+// }
 
 
 
