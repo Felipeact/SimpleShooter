@@ -24,13 +24,17 @@ AGun::AGun()
 void AGun::PullTrigger()
 {
 	UGameplayStatics::SpawnEmitterAttached(MuzzleFlash, Mesh, TEXT("MuzzleFlashSocket"));
+	UGameplayStatics::SpawnSoundAttached(MuzzleSound, Mesh, TEXT("MuzzleSoundSocket"));
 
 	FHitResult Hit;
 	FVector ShotDirection;
 
 	bool bSuccess = GunTrace(Hit, ShotDirection );
 	if (bSuccess){
+		
 		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ImpactEffect,Hit.Location, ShotDirection.Rotation());
+		UGameplayStatics::PlaySoundAtLocation(GetWorld(), ImpactSound,Hit.Location);
+		
 		AActor* HitActor = Hit.GetActor();
 		
 		if (HitActor != nullptr)
