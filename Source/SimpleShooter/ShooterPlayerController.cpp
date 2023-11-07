@@ -37,7 +37,7 @@ void AShooterPlayerController::GameHasEnded(class AActor *EndGameFocus, bool bIs
         if (LoseScreen != nullptr)
         {
             LoseScreen->AddToViewport();
-            HUD->RemoveFromViewport();
+            HUD->RemoveFromParent();
         }
     }
 
