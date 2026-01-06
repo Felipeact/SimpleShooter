@@ -1,14 +1,76 @@
-Binaries
-DerivedDataCache
-Intermediate
-Saved
-.vscode
-.vs
-*.VC.db
-*.opensdf
-*.opendb
-*.sdf
+# =========================
+# Unreal Engine Generated
+# =========================
+
+# Binaries
+Binaries/
+*/Binaries/
+
+# Build results
+Build/
+*/Build/
+
+# Intermediate files
+Intermediate/
+*/Intermediate/
+
+# Derived data cache
+DerivedDataCache/
+*/DerivedDataCache/
+
+# Saved data (logs, autosaves, crashes)
+Saved/
+*/Saved/
+
+# =========================
+# Visual Studio / IDE
+# =========================
+
+.vs/
+.vscode/
+.idea/
+
+# Visual Studio files
 *.sln
-*.suo
-*.xcodeproj
-*.xcworkspace
+*.vcxproj*
+*.opensdf
+*.sdf
+*.user
+*.db
+*.opendb
+
+# Rider
+.idea/
+
+# VS Code
+*.code-workspace
+
+# =========================
+# OS / Editor Junk
+# =========================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Unreal Specific
+# =========================
+
+# Unreal auto-generated files
+*.tmp
+*.log
+
+# Crash reports
+CrashReportClient/
+
+# =========================
+# Optional (keep repo clean)
+# =========================
+
+# Local environment
+.env
+
+# Backup files
+*~
+*.bak
